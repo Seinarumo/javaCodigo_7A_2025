@@ -1,13 +1,28 @@
-# Solicitar las tres evaluaciones al usuario
-nota1 = float(input("Ingrese la primera nota: "))
-nota2 = float(input("Ingrese la segunda nota: "))
-nota3 = float(input("Ingrese la tercera nota: "))
+import java.util.Scanner;
 
-# Calcular el promedio
-promedio = (nota1 + nota2 + nota3) / 3
+public class EvaluacionAlumno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-# Mostrar si está aprobado o reprobado con un solo if
-if promedio >= 7:
-    print("Aprobado")
-else:
-    print("Reprobado")
+        // Solicitar las 3 notas
+        System.out.print("Ingrese la primera nota: ");
+        double nota1 = scanner.nextDouble();
+
+        System.out.print("Ingrese la segunda nota: ");
+        double nota2 = scanner.nextDouble();
+
+        System.out.print("Ingrese la tercera nota: ");
+        double nota3 = scanner.nextDouble();
+
+        // Calcular el promedio
+        double promedio = (nota1 + nota2 + nota3) / 3;
+
+        // Mostrar si está aprobado o reprobado usando un único if
+        if (promedio >= 7)
+            System.out.println("Aprobado");
+        else
+            System.out.println("Reprobado");
+
+        scanner.close();
+    }
+}
